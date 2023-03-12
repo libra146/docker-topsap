@@ -1,0 +1,10 @@
+spawn /opt/TopSAP/topvpn login
+expect "Input your server address"
+send "{{server_address}}\n"
+expect "Login_Mode"
+send "1\n"
+expect "Please enter user and password"
+send "{{user_name}}\n"
+expect "Password:"
+send "{{password}}\n"
+interact
