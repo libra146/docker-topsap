@@ -7,7 +7,7 @@
 
 望批评、指正。欢迎提交 issue、PR，包括但不仅限于 bug、各种疑问、代码和文档的改进。
 
-详细用法见于 doc/usage.md，常见问题见于 doc/faq.md，自行构建可参照构建说明 doc/build.md。
+详细用法见于 [doc/usage.md](https://github.com/libra146/docker-topsap/blob/main/doc/usage.md)，常见问题见于 [doc/faq.md](https://github.com/libra146/docker-topsap/blob/main/doc/faq.md)，自行构建可参照构建说明 [doc/build.md](https://github.com/libra146/docker-topsap/blob/main/doc/build.md)。
 
 
 
