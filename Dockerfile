@@ -8,13 +8,14 @@ ENV SERVER_ADDRESS=""
 ENV USER_NAME=""
 ENV PASSWORD=""
 
+COPY TopSAP-3.5.2.36.2-x86_64.deb .
+
 RUN export DEBIAN_FRONTEND=noninteractive && \
   ln -fs /usr/share/zoneinfo/Asia /etc/localtime && \
   apt-get update && apt-get -y --no-install-suggests --no-install-recommends install tzdata sudo curl dante-server && \
   dpkg-reconfigure --frontend noninteractive tzdata && \
-  curl -o /tmp/topsap.deb -k https://app.topsec.com.cn/vpn/sslvpnclient/TopSAP-3.5.2.35.2-x86_64.deb && \
-  dpkg -i /tmp/topsap.deb && \
-  rm -r /tmp/topsap.deb && \
+  dpkg -i TopSAP-3.5.2.36.2-x86_64.deb && \
+  rm -r TopSAP-3.5.2.36.2-x86_64.deb && \
   apt-get install -y expect && \
   rm -rf /var/lib/apt/lists/*
 
