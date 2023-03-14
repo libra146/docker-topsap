@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          lfs: true
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
