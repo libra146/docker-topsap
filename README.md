@@ -1,15 +1,20 @@
 # docker-topsap
 
-使天融信开发的 TopSAP 运行在 docker 或 podman 中，并提供 socks5 代理服务
+[![Docker-publish](https://github.com/libra146/docker-topsap/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/libra146/docker-topsap/actions/workflows/docker-publish.yml)
+![GitHub issues](https://img.shields.io/github/issues/libra146/docker-topsap)
+![GitHub repo size](https://img.shields.io/github/repo-size/libra146/docker-topsap)
+![Docker Pulls](https://img.shields.io/docker/pulls/libra146/docker-topsap)
+[![GitHub](https://img.shields.io/github/license/libra146/docker-topsap)](https://github.com/libra146/docker-topsap/blob/main/LICENSE)
 
+使天融信开发的 TopSAP 运行在 docker 或 podman 中，并提供 socks5 代理服务
 
 本项目基于 天融信 官方“Linux”版的 deb 包制作。
 
 望批评、指正。欢迎提交 issue、PR，包括但不仅限于 bug、各种疑问、代码和文档的改进。
 
-详细用法见于 [doc/usage.md](https://github.com/libra146/docker-topsap/blob/main/doc/usage.md)，常见问题见于 [doc/faq.md](https://github.com/libra146/docker-topsap/blob/main/doc/faq.md)，自行构建可参照构建说明 [doc/build.md](https://github.com/libra146/docker-topsap/blob/main/doc/build.md)。
-
-
+详细用法见于 [doc/usage.md](https://github.com/libra146/docker-topsap/blob/main/doc/usage.md)
+，常见问题见于 [doc/faq.md](https://github.com/libra146/docker-topsap/blob/main/doc/faq.md)
+，自行构建可参照构建说明 [doc/build.md](https://github.com/libra146/docker-topsap/blob/main/doc/build.md)。
 
 ## 特别声明
 
