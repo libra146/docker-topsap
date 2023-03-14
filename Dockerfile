@@ -8,8 +8,6 @@ ENV SERVER_ADDRESS=""
 ENV USER_NAME=""
 ENV PASSWORD=""
 
-COPY TopSAP-3.5.2.36.2-x86_64.deb .
-
 RUN ls && \
   export DEBIAN_FRONTEND=noninteractive && \
   ln -fs /usr/share/zoneinfo/Asia /etc/localtime && \
