@@ -5,9 +5,10 @@
 ## 使用方法
 
 1. 安装 Docker。
-2. 在终端输入：docker run -d --device /dev/net/tun --cap-add NET_ADMIN -p 127.0.0.1:1088:1080 --name some_name -e USER_NAME=you_name -e PASSWORD=you_password -e SERVER_ADDRESS=you_address libra146/docker-topsap
+2. 在终端输入：docker run -d -it --device /dev/net/tun --cap-add NET_ADMIN -p 127.0.0.1:1088:1080 --name some_name -e USER_NAME=you_name -e PASSWORD=you_password -e SERVER_ADDRESS=you_address libra146/docker-topsap
 3. 将以上命令的环境变量替换成对应的用户名密码还有服务器地址。
 4. 浏览器（或其他支持的应用）可配置socks5代理，地址 127.0.0.1, 端口 1080。
+5. 注意⚠️：docker 参数中的 -it 命令一定要加，因为 expect 命令需要在终端中才能正常执行，需要 docker 分配一个伪终端给 expect 用才能正常登录，否则会卡在输入密码的地方。
 
 ## 环境变量
 
