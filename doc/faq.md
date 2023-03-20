@@ -8,6 +8,8 @@
 `--device /dev/net/tun --cap-add NET_ADMIN`
 ```
 
+## Device tun0 not found.
+目前测试不会每次都复现，可以重试一下，应该就可以了，如果不可以请反馈。
 
 ## 其他问题
 
