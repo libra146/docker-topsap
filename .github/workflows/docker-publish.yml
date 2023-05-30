@@ -16,6 +16,11 @@ jobs:
         with:
           lfs: true
 
+      - name: Set the value
+        id: step_one
+        run: |
+          echo 'TAG_VERSION=libra146/docker-topsap:$(echo \"${{ github.ref }}\" | sed -e "s,.*/\(.*\),\1,")' >> "$GITHUB_ENV"
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
@@ -34,8 +39,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: |
-            "libra146/docker-topsap:$(echo \"${{ github.ref }}\" | sed -e 's,.*/\(.*\),\1,')"
+          tags: libra146/docker-topsap:{{ env.TAG_VERSION }}
 
       - name: Build and push latest
         uses: docker/build-push-action@v4
