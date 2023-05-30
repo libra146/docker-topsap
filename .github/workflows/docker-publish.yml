@@ -19,7 +19,8 @@ jobs:
       - name: Set the value
         id: step_one
         run: |
-          echo 'TAG_VERSION=libra146/docker-topsap:$(echo "${{ github.ref }}" | sed -e "s,.*/\(.*\),\1,")' >> "$GITHUB_ENV"
+          tag=libra146/docker-topsap:$(echo "${{ github.ref }}" | sed -e "s,.*/\(.*\),\1,")
+          echo "TAG_VERSION=$tag" >> "$GITHUB_ENV"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
