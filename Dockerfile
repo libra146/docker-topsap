@@ -17,8 +17,9 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
   dpkg-reconfigure --frontend noninteractive tzdata && \
   # 解决TopSap检测到Debian系统无法安装的问题，可以看这篇文章：https://blog.d77.xyz/archives/649aab5b.html
   echo Ubuntu >> /etc/issue && \
-  dpkg -i TopSAP-3.5.2.36.2-x86_64.deb && \
-  rm -r TopSAP-3.5.2.36.2-x86_64.deb && \
+   # 根据架构安装对应的 TopSAP
+  if [ "$(uname -m)" = "x86_64" ]; then dpkg -i TopSAP-3.5.2.36.2-x86_64.deb; else dpkg -i TopSAP-3.5.2.36.2-aarch64.deb; fi && \
+  rm -r TopSAP-3.5.2.36.2-x86_64.deb TopSAP-3.5.2.36.2-aarch64.deb && \
   apt-get install -y expect && \
   rm -rf /var/lib/apt/lists/*
 
