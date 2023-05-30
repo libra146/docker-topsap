@@ -2,6 +2,10 @@
 
 格式基于 [Keep a Changelog](http://keepachangelog.com/)
 
+## 0.1.2 - 2023-05-30
+### Fixed
+- 添加 ARM 架构支持
+
 
 ## 0.1.1 - 2023-03-20
 ### Fixed
