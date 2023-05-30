@@ -35,7 +35,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            libra146/docker-topsap:$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+            "libra146/docker-topsap:$(echo \"${{ github.ref }}\" | sed -e 's,.*/\(.*\),\1,')"
 
       - name: Build and push latest
         uses: docker/build-push-action@v4
