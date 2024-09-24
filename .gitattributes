@@ -1,2 +1,0 @@
-TopSAP-3.5.2.36.2-x86_64.deb filter=lfs diff=lfs merge=lfs -text
-TopSAP-3.5.2.36.2-aarch64.deb filter=lfs diff=lfs merge=lfs -text
